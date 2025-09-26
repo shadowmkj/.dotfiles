@@ -2,6 +2,8 @@ starship init fish | source
 zoxide init --cmd cd fish | source
 eval "$(/opt/homebrew/bin/brew shellenv)"
 
+set EDITOR nvim
+
 # Replace ls with eza
 alias ls='eza --icons --git'
 
