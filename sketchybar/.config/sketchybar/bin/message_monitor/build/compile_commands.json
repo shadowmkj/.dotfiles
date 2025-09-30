@@ -1,0 +1,14 @@
+[
+{
+  "directory": "/Users/milan/.config/sketchybar/bin/message_monitor/build",
+  "command": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++   -O3 -DNDEBUG -std=gnu++2b -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.0.sdk -Wall -Wextra -Wpedantic -o CMakeFiles/message_monitor.dir/app_status.cpp.o -c /Users/milan/.config/sketchybar/bin/message_monitor/app_status.cpp",
+  "file": "/Users/milan/.config/sketchybar/bin/message_monitor/app_status.cpp",
+  "output": "CMakeFiles/message_monitor.dir/app_status.cpp.o"
+},
+{
+  "directory": "/Users/milan/.config/sketchybar/bin/message_monitor/build",
+  "command": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++   -O3 -DNDEBUG -std=gnu++2b -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.0.sdk -Wall -Wextra -Wpedantic -o CMakeFiles/message_monitor.dir/main.cpp.o -c /Users/milan/.config/sketchybar/bin/message_monitor/main.cpp",
+  "file": "/Users/milan/.config/sketchybar/bin/message_monitor/main.cpp",
+  "output": "CMakeFiles/message_monitor.dir/main.cpp.o"
+}
+]

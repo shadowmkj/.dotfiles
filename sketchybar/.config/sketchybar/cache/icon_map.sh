@@ -1,0 +1,1 @@
+/run/current-system/sw/bin/icon_map.sh
