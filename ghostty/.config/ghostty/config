@@ -3,10 +3,14 @@ font-family = JetBrainsMono Nerd Font
 font-size = 20
 background-blur-radius = 40
 mouse-hide-while-typing = true
-window-decoration = true
 macos-option-as-alt = true
 background-opacity = 0.7
 shell-integration-features = no-cursor
 cursor-style = block
 cursor-style-blink = false
+window-padding-x = 8
+window-padding-y = 8
+
+macos-titlebar-style = hidden
+macos-icon = glass
 
