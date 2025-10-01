@@ -57,7 +57,8 @@ sketchybar --default \
 	popup.background.border_color=0xffcccccc \
 	popup.background.border_width=1 \
 	popup.background.corner_radius=16 \
-	popup.height=34
+	popup.height=34 \
+  topmost=on
 
 # 
 # LEFT
@@ -66,9 +67,9 @@ source "$ITEMS_DIR/apple.sh"
 
 source "$ITEMS_DIR/aerospace.sh"
 
-# source "$ITEMS_DIR/front_app.sh"
+source "$ITEMS_DIR/front_app.sh"
 
-# source "$ITEMS_DIR/cpu.sh"
+source "$ITEMS_DIR/cpu.sh"
 
 source "$ITEMS_DIR/status.sh"
 

@@ -1,7 +1,7 @@
 #!/bin/sh
 update() {
-  IP_ADDRESS=$(scutil --nwi | /run/current-system/sw/bin/rg address | sed 's/.*://' | tr -d ' ' | head -1)
-  IS_VPN=$(scutil --nwi | /run/current-system/sw/bin/rg -m1 'utun' | awk '{ print $1 }')
+  IP_ADDRESS=$(scutil --nwi | /opt/homebrew/bin/rg address | sed 's/.*://' | tr -d ' ' | head -1)
+  IS_VPN=$(scutil --nwi | /opt/homebrew/bin/rg -m1 'utun' | awk '{ print $1 }')
 
   if [[ $IS_VPN != "" ]]; then
     ICON=􀤆

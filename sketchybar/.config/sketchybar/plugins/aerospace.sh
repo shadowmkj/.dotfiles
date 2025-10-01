@@ -15,7 +15,7 @@ update_space() {
     ICON_PADDING_RIGHT=10
     ;;
   esac
-
+  echo $ICON
   sketchybar --set $NAME \
     icon=$ICON \
     icon.padding_left=$ICON_PADDING_LEFT \
