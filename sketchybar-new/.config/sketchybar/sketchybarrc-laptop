@@ -7,13 +7,14 @@ ITEMS_DIR="$HOME/.config/sketchybar/items"
 PLUGIN_SHARED_DIR="$HOME/.config/sketchybar/plugins"
 
 SPOTIFY_EVENT="com.spotify.client.PlaybackStateChanged"
-source "$HOME/.config/sketchybar/colors.sh"
+# source "$HOME/.config/sketchybar/catppuccin.sh"
+source "$HOME/.config/sketchybar/gruvbox.sh"
 
 sketchybar --add event aerospace_workspace_change
 
 sketchybar --bar \
     height=32 \
-    color=0x00000000 \
+    color=$TRANSPARENT \
     margin=0 \
     sticky=on \
     padding_left=23 \
@@ -27,7 +28,7 @@ sketchybar --bar \
 # background.color=0x9924273a
 # 0x66494d64
 sketchybar --default \
-    background.color=0x9924273a \
+    background.color=$BACKGROUND_1 \
     background.corner_radius=5 \
     background.padding_right=5 \
     background.height=26 \
@@ -35,7 +36,7 @@ sketchybar --default \
     icon.padding_left=5 \
     icon.padding_right=5 \
     label.font="$FONT_FACE:ExtraBold:12.0" \
-    label.color=0xffcad3f5 \
+    label.color=$LABEL_COLOR \
     label.y_offset=0 \
     label.padding_left=0 \
     label.padding_right=5
@@ -63,19 +64,19 @@ source "$ITEMS_DIR/spaces.sh"
 
 sketchybar --add item front_app left \
     --set front_app \
-    background.color=0xffa6da95 \
+    background.color=$FRONT_BG \
     background.padding_left=0 \
     background.padding_right=0 \
     icon.y_offset=1 \
-    icon.color=0xff24273a \
+    icon.color=$FRONT_ICON \
     label.drawing=no \
     script="$PLUGIN_SHARED_DIR/front_app.sh" \
     --add item front_app.separator left \
     --set front_app.separator \
-    background.color=0x00000000 \
+    background.color=$TRANSPARENT\
     background.padding_left=-3 \
     icon= \
-    icon.color=0xffa6da95 \
+    icon.color=$FRONT_BG \
     icon.font="$FONT_FACE:Bold:20.0" \
     icon.padding_left=0 \
     icon.padding_right=0 \
@@ -83,7 +84,7 @@ sketchybar --add item front_app left \
     label.drawing=no \
     --add item front_app.name left \
     --set front_app.name \
-    background.color=0x00000000 \
+    background.color=$TRANSPARENT\
     background.padding_right=0 \
     icon.drawing=off \
     label.font="$FONT_FACE:ExtraBold:12.0" \
@@ -118,7 +119,7 @@ sketchybar --add bracket front_app_bracket \
 sketchybar --add item clock right \
     --set clock \
     icon=󰃰 \
-    icon.color=0xffed8796 \
+    icon.color=$RED \
     update_freq=10 \
     script="$PLUGIN_SHARED_DIR/clock.sh"
 
@@ -129,7 +130,7 @@ sketchybar --add item battery right \
 
 sketchybar --add item volume right \
     --set volume \
-    icon.color=0xff8aadf4 \
+    icon.color=$BLUE \
     label.drawing=true \
     script="$PLUGIN_SHARED_DIR/volume.sh" \
     --subscribe volume volume_change
