@@ -1,5 +1,7 @@
 #!/usr/bin/env sh
 source "$HOME/.config/sketchybar/icons.sh"
+source "$HOME/.config/sketchybar/gruvbox.sh"
+# source "$HOME/.config/sketchybar/catppuccin.sh"
 # Battery is here bcause the ICON_COLOR doesn't play well with all background colors
 
 PERCENTAGE=$(pmset -g batt | grep -Eo "\d+%" | cut -d% -f1)
@@ -34,7 +36,7 @@ esac
 
 if [[ $CHARGING != "" ]]; then
   ICON=$BATTERY_CHARGING
-  ICON_COLOR=0xffa6e3a1
+  ICON_COLOR=$GREEN
 fi
 
 sketchybar --set $NAME \
