@@ -8,7 +8,8 @@ PLUGIN_SHARED_DIR="$HOME/.config/sketchybar/plugins"
 
 SPOTIFY_EVENT="com.spotify.client.PlaybackStateChanged"
 # source "$HOME/.config/sketchybar/catppuccin.sh"
-source "$HOME/.config/sketchybar/gruvbox.sh"
+# source "$HOME/.config/sketchybar/gruvbox.sh"
+source "$HOME/.config/sketchybar/rosepine.sh"
 
 sketchybar --add event aerospace_workspace_change
 

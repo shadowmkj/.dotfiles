@@ -1,6 +1,7 @@
 #!/usr/bin/env sh
 source "$HOME/.config/sketchybar/icons.sh"
-source "$HOME/.config/sketchybar/gruvbox.sh"
+# source "$HOME/.config/sketchybar/gruvbox.sh"
+source "$HOME/.config/sketchybar/rosepine.sh"
 # source "$HOME/.config/sketchybar/catppuccin.sh"
 # Battery is here bcause the ICON_COLOR doesn't play well with all background colors
 

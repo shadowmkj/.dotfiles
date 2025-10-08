@@ -1,6 +1,6 @@
 function ColorMyPencils(color)
-    -- color = color or "rose-pine"
-    color = color or "gruvbox"
+    color = color or "rose-pine"
+    -- color = color or "gruvbox"
     vim.cmd.colorscheme(color)
 
     vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
@@ -36,7 +36,14 @@ return {
         name = "rose-pine",
         config = function()
             require('rose-pine').setup({
-                disable_background = true,
+                terminal_colors = true,
+                enable = {
+                    terminal = true,
+                    background = false
+                },
+                styles = {
+                    transparency = true,
+                }
             })
 
             vim.cmd("colorscheme rose-pine")
