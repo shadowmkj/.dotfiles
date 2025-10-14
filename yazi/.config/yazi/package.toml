@@ -10,3 +10,8 @@ hash = "c0bf69ad2c44005892d586e9693993c6"
 use = "bennyyip/gruvbox-dark"
 rev = "e5e1aef"
 hash = "eb88137cf13a796225254344bf6def2c"
+
+[[flavor.deps]]
+use = "Mintass/rose-pine"
+rev = "8343340"
+hash = "e2336631865c0f90276dcbc553d532fc"

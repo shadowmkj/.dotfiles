@@ -14,3 +14,4 @@ window-padding-y = 8
 macos-titlebar-style = hidden
 macos-icon = glass
 
+custom-shader = shaders/cursor_smear_fade.glsl

@@ -1,0 +1,7 @@
+# ~/.config/carapace/specs/go.yaml
+name: go
+commands:
+  - name: run
+    completion:
+      # This combines package completion with file completion
+      action: ["$carapace.ActionFiles()"]

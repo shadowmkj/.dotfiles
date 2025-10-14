@@ -138,7 +138,7 @@ alt-shift-b = 'move-node-to-workspace B'
 alt-shift-w = 'move-node-to-workspace W'
 
 
-alt-shift-f = 'fullscreen'
+alt-f = 'fullscreen'
 alt-m = 'macos-native-minimize'
 
 # See: https://nikitabobko.github.io/AeroSpace/commands#workspace-back-and-forth

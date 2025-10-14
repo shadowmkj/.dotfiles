@@ -1,0 +1,12 @@
+# Browsers
+hyper - b : ^open -a "Zen"
+
+# Development
+hyper - g : ^open -a "Ghostty"
+
+# Communication
+hyper - d : ^open -a "Discord"
+hyper - w : ^open -a "WhatsApp"
+
+# System App
+hyper - f : ^open -a "Finder"
