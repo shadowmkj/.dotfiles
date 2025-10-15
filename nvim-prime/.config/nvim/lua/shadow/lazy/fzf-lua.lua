@@ -3,7 +3,7 @@ return {
   {
     "ibhagwan/fzf-lua",
     cmd = "FzfLua",
-    opts = function(_, opts)
+    opts = function()
       local fzf = require("fzf-lua")
       local config = fzf.config
       local actions = fzf.actions
@@ -174,24 +174,6 @@ return {
       { "<leader>sm", "<cmd>FzfLua marks<cr>", desc = "Jump to Mark" },
       { "<leader>sR", "<cmd>FzfLua resume<cr>", desc = "Resume" },
       { "<leader>sq", "<cmd>FzfLua quickfix<cr>", desc = "Quickfix List" },
-      {
-        "<leader>ss",
-        function()
-          require("fzf-lua").lsp_document_symbols({
-            regex_filter = symbols_filter,
-          })
-        end,
-        desc = "Goto Symbol",
-      },
-      {
-        "<leader>sS",
-        function()
-          require("fzf-lua").lsp_live_workspace_symbols({
-            regex_filter = symbols_filter,
-          })
-        end,
-        desc = "Goto Symbol (Workspace)",
-      },
     },
   },
 

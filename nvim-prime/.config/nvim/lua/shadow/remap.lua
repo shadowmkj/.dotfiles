@@ -49,7 +49,6 @@ vim.keymap.set(
 
 vim.keymap.set("n", "<leader>mr", "<cmd>CellularAutomaton make_it_rain<CR>");
 vim.keymap.set("n", "<leader>bd", "<cmd>bd<CR>");
-vim.keymap.set("n", "<leader>gd", "<cmd>Trouble lsp_definitions toggle<cr>", {desc = "Toggle Go to Definition"});
 vim.keymap.set({"n", "i"}, "<C-s>", "<cmd>w<CR><Esc>")
 
 -- wrap
