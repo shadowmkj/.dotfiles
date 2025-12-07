@@ -1,5 +1,5 @@
 after-startup-command = [
-  'exec-and-forget borders active_color=0xffeb6f92 xff inactive_color=0xff494d64 width=5.0',
+  'exec-and-forget borders active_color=0xffeb6f92 inactive_color=0xff494d64 width=5.0',
 ]
 # Start AeroSpace at login
 start-at-login = true
@@ -117,7 +117,7 @@ alt-8 = 'workspace 8'
 alt-9 = 'workspace 9'
 alt-a = 'workspace A' # In your config, you can drop workspace bindings that you don't need
 alt-d = 'workspace D'
-alt-s = 'workspace S'
+# alt-s = 'workspace S'
 alt-b = 'workspace B'
 alt-w = 'workspace W'
 
@@ -133,7 +133,7 @@ alt-shift-8 = 'move-node-to-workspace 8'
 alt-shift-9 = 'move-node-to-workspace 9'
 alt-shift-a = 'move-node-to-workspace A'
 alt-shift-d = 'move-node-to-workspace D'
-alt-shift-s = 'move-node-to-workspace S'
+# alt-shift-s = 'move-node-to-workspace S'
 alt-shift-b = 'move-node-to-workspace B'
 alt-shift-w = 'move-node-to-workspace W'
 
@@ -182,3 +182,13 @@ run = 'move-node-to-workspace W'
 [[on-window-detected]]
 if.app-id = 'com.mitchellh.ghostty'
 run = 'move-node-to-workspace 1'
+
+
+[[on-window-detected]]
+if.app-id = 'net.imput.helium'
+run = 'move-node-to-workspace B'
+
+[[on-window-detected]]
+if.app-id = 'com.kagi.kagimacOS'
+run = 'move-node-to-workspace B'
+
