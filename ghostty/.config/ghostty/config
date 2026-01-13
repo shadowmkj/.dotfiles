@@ -13,4 +13,5 @@ window-padding-y = 8
 
 macos-titlebar-style = hidden
 macos-icon = glass
+custom-shader = "/Users/milan/.dotfiles/ghostty/.config/ghostty/shaders/cursor_smear_fade.glsl"
 

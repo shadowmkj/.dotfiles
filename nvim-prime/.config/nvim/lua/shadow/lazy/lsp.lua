@@ -29,6 +29,7 @@ return {
 				"lua_ls",
 				"rust_analyzer",
 				"clangd",
+				"pylsp",
 			},
 			handlers = {
 				function(server_name) -- default handler (optional)
@@ -55,6 +56,29 @@ return {
 						},
 					})
 				end,
+                ["pylsp"] = function()
+            require("lspconfig").pylsp.setup({
+                capabilities = capabilities,
+                settings = {
+                    pylsp = {
+                        plugins = {
+                            -- Disable pycodestyle
+                            pycodestyle = {
+                                enabled = false,
+                            },
+                            -- Disable pyflakes (optional, but you had it in your snippet)
+                            pyflakes = {
+                                enabled = false
+                            },
+                            -- Disable mccabe (complexity checker, often annoying)
+                            mccabe = {
+                                enabled = false
+                            },
+                        },
+                    },
+                },
+            })
+        end,
 			},
 		})
 

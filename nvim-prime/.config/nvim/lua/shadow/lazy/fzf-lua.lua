@@ -7,7 +7,7 @@ return {
       local fzf = require("fzf-lua")
       local config = fzf.config
       local actions = fzf.actions
-
+        vim.keymap.set('n', '<leader>fg', fzf.live_grep, { desc = "Fzf Live Grep" })
       -- Quickfix
       config.defaults.keymap.fzf["ctrl-q"] = "select-all+accept"
       config.defaults.keymap.fzf["ctrl-u"] = "half-page-up"
@@ -146,7 +146,7 @@ return {
         "<cmd>FzfLua buffers sort_mru=true sort_lastused=true<cr>",
         desc = "Switch Buffer",
       },
-      -- { "<leader>/", LazyVim.pick("live_grep"), desc = "Grep (Root Dir)" },
+      -- { "<leader>gp", "FzfLua live_grep<cr>", desc = "Grep (Root Dir)" },
       { "<leader>:", "<cmd>FzfLua command_history<cr>", desc = "Command History" },
       { "<leader><space>", "<cmd>FzfLua files<cr>", desc = "Find Files (Root Dir)" },
       -- find
