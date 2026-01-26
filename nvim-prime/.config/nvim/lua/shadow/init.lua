@@ -30,13 +30,6 @@ autocmd("TextYankPost", {
 	end,
 })
 
-vim.api.nvim_create_autocmd("BufWritePre", {
-	pattern = "*",
-	callback = function()
-		vim.lsp.buf.format({ async = false })
-	end,
-})
-
 autocmd({ "BufWritePre" }, {
 	group = ShadowGroup,
 	pattern = "*",
@@ -81,7 +74,6 @@ autocmd("LspAttach", {
 })
 
 vim.env.FZF_DEFAULT_COMMAND = 'rg --hidden --glob "! .git/*"'
-vim.keymap.set("n", "<C-p>", ":Files<CR>", { silent = true })
 
 vim.g.netrw_browse_split = 0
 vim.g.netrw_banner = 0

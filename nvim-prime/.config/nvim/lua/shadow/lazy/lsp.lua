@@ -62,15 +62,12 @@ return {
                 settings = {
                     pylsp = {
                         plugins = {
-                            -- Disable pycodestyle
                             pycodestyle = {
                                 enabled = false,
                             },
-                            -- Disable pyflakes (optional, but you had it in your snippet)
                             pyflakes = {
                                 enabled = false
                             },
-                            -- Disable mccabe (complexity checker, often annoying)
                             mccabe = {
                                 enabled = false
                             },
@@ -94,6 +91,8 @@ return {
 				["<C-k>"] = cmp.mapping.select_prev_item(cmp_select),
 				["<C-j>"] = cmp.mapping.select_next_item(cmp_select),
 				["<CR>"] = cmp.mapping.confirm({ select = true }),
+                -- A mapping to trigger first completion item
+                ["<C-l>"] = cmp.mapping.confirm({ select = true, behavior = cmp.ConfirmBehavior.Replace }),
 				["<C-Space>"] = cmp.mapping.complete(),
 			}),
 			sources = cmp.config.sources({
