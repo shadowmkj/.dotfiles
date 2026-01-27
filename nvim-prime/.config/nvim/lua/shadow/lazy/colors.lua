@@ -1,59 +1,107 @@
+local transparent_bg = true
 function ColorMyPencils(color)
-    color = color or "rose-pine"
-    -- color = color or "gruvbox"
-    vim.cmd.colorscheme(color)
-
-    -- vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
-    -- vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
-
+	if color ~= nil then
+		color = "rose-pine"
+		vim.cmd.colorscheme(color)
+	end
+	vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
+	vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
 end
 
 return {
-    {
-        "folke/tokyonight.nvim",
-        config = function()
-            require("tokyonight").setup({
-                -- your configuration comes here
-                -- or leave it empty to use the default settings
-                style = "storm", -- The theme comes in three styles, `storm`, `moon`, a darker variant `night` and `day`
-                transparent = true, -- Enable this to disable setting the background color
-                terminal_colors = true, -- Configure the colors used when opening a `:terminal` in Neovim
-                styles = {
-                    -- Style to be applied to different syntax groups
-                    -- Value is any valid attr-list value for `:help nvim_set_hl`
-                    comments = { italic = false },
-                    keywords = { italic = false },
-                    -- Background styles. Can be "dark", "transparent" or "normal"
-                    sidebars = "dark", -- style for sidebars, see below
-                    floats = "dark", -- style for floating windows
-                },
-            })
-            ColorMyPencils()
-        end
-    },
-    { "catppuccin/nvim", name = "catppuccin", priority = 1000 },
-    {
-        "rose-pine/neovim",
-        name = "rose-pine",
-        config = function()
-            require('rose-pine').setup({
-                terminal_colors = true,
-                enable = {
-                    terminal = true,
-                    background = false
-                },
-                styles = {
-                    transparency = true,
-                }
-            })
+	{
+		"erikbackman/brightburn.vim",
+	},
+	{
+		"rebelot/kanagawa.nvim",
+		config = function()
+			require("kanagawa").setup({
+				transparent = transparent_bg,
+				terminalColors = true,
+				overrides = function(colors)
+                    local theme = colors.theme
+					return {
+						LineNr = { bg = "none" },
+						-- LineNrAbove = { bg = "none" },
+						-- LineNrBelow = { bg = "none" },
+						WinSeparator = { fg = theme.ui.bg_p1, bg = "none" },
+						SignColumn = { bg = "none" },
+						FoldColumn = { bg = "none" },
+						CursorLineSign = { bg = "none" },
+						GitSignsAdd = { bg = "none" },
+						GitSignsChange = { bg = "none" },
+						GitSignsDelete = { bg = "none" },
+					}
+				end,
+			})
+		end,
+	},
+	{
+		"folke/tokyonight.nvim",
+		config = function()
+			require("tokyonight").setup({
+				style = "storm",
+				transparent = transparent_bg,
+				transparent_mode = true,
+				terminal_colors = true,
+				styles = {
+					comments = { italic = false },
+					keywords = { italic = false },
+					sidebars = transparent_bg and "transparent" or "dark",
+					floats = transparent_bg and "transparent" or "dark",
+				},
+			})
+		end,
+	},
+	{ "catppuccin/nvim", name = "catppuccin", priority = 1000 },
+	{
+		"rose-pine/neovim",
+		name = "rose-pine",
+		config = function()
+			require("rose-pine").setup({
+				terminal_colors = true,
+				enable = {
+					terminal = true,
+					background = false,
+				},
+				styles = {
+					transparency = true,
+				},
+			})
 
-            vim.cmd("colorscheme rose-pine")
+			-- vim.cmd("colorscheme rose-pine")
 
-            ColorMyPencils()
-        end
-    },
-    { "ellisonleao/gruvbox.nvim", priority = 1000 , config = true, opts = {
-        transparent_mode = true,
-    } },
-
+			-- ColorMyPencils()
+		end,
+	},
+	{
+		"ellisonleao/gruvbox.nvim",
+		name = "gruvbox",
+		config = function()
+			require("gruvbox").setup({
+				terminal_colors = true, -- add neovim terminal colors
+				undercurl = true,
+				underline = false,
+				bold = true,
+				italic = {
+					strings = false,
+					emphasis = false,
+					comments = false,
+					operators = false,
+					folds = false,
+				},
+				strikethrough = true,
+				invert_selection = false,
+				invert_signs = false,
+				invert_tabline = false,
+				invert_intend_guides = false,
+				inverse = true, -- invert background for search, diffs, statuslines and errors
+				contrast = "", -- can be "hard", "soft" or empty string
+				palette_overrides = {},
+				overrides = {},
+				dim_inactive = false,
+				transparent_mode = true,
+			})
+		end,
+	},
 }

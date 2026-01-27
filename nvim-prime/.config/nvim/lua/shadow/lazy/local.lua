@@ -1,4 +1,3 @@
-
 local local_plugins = {
     {
         "harpoon",

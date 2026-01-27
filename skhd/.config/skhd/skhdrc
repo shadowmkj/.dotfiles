@@ -1,12 +1,12 @@
 # Browsers
-hyper - b : ^open -a "Helium"
+hyper - b : open -na "Firefox"
 
 # Development
-hyper - g : ^open -a "Ghostty"
+hyper - g : open -a "Ghostty"
 
 # Communication
-hyper - d : ^open -a "Discord"
-hyper - w : ^open -a "WhatsApp"
+hyper - d : open -a "Discord"
+hyper - w : open -a "WhatsApp"
 
 # System App
-hyper - f : ^open -a "Finder"
+hyper - f : open -a "Finder"

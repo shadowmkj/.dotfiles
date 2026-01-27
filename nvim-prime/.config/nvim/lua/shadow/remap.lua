@@ -45,6 +45,7 @@ vim.keymap.set("n", "<leader>ee", "oif err != nil {<CR>}<Esc>Oreturn err<Esc>")
 vim.keymap.set("n", "<leader>mr", "<cmd>CellularAutomaton make_it_rain<CR>")
 vim.keymap.set("n", "<leader>bd", "<cmd>bd<CR>")
 vim.keymap.set("n", "<leader>ls", "<cmd>!lcode submit %<CR>") -- submit to leetcode
+vim.keymap.set("n", "<leader>tt", "<cmd>:Themery<CR>") -- submit to leetcode
 -- vim.keymap.set({ "n", "i" }, "<C-s>", "<cmd>w<CR><Esc>")
 
 -- wrap
