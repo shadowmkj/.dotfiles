@@ -15,3 +15,8 @@ hash = "eb88137cf13a796225254344bf6def2c"
 use = "Mintass/rose-pine"
 rev = "8343340"
 hash = "e2336631865c0f90276dcbc553d532fc"
+
+[[flavor.deps]]
+use = "marcosvnmelo/kanagawa-dragon"
+rev = "4905527"
+hash = "5fd7aa0bf4e7d9753ad8a4660a6eb94f"

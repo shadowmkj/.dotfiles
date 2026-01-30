@@ -20,6 +20,15 @@ alias ta='tmux attach'
 alias lg='lazygit'
 alias pms='podman machine stop'
 alias pmS='podman machine start'
+alias gta='cd ~/Documents/Desk/Apps'
+alias hideicons='defaults write com.apple.finder CreateDesktop false'
+alias showicons='defaults write com.apple.finder CreateDesktop true'
+alias tf="terraform"
+alias ff="fastfetch"
+alias tns="tmux new-session -s (pwd | path basename)"
+alias tks="tmux kill-server"
+
+
 
 # Yazi cd integration
 function y
@@ -29,4 +38,8 @@ function y
 		builtin cd -- "$cwd"
 	end
 	rm -f -- "$tmp"
+end
+
+function fish_user_key_bindings
+    bind \cf 'sh /Users/milan/scripts/tmux-sessionize; commandline -f repaint'
 end

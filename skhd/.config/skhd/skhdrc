@@ -2,7 +2,7 @@
 hyper - b : open -na "Firefox"
 
 # Development
-hyper - g : open -a "Ghostty"
+hyper - 0x24 : open -a "Kitty"
 
 # Communication
 hyper - d : open -a "Discord"
