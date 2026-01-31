@@ -1,0 +1,83 @@
+# Main background, empty for terminal default (supports transparency)
+theme[main_bg]=""
+
+# Main text color (fujiWhite)
+theme[main_fg]="#c5c9c5"
+
+# Title color for boxes (fujiWhite)
+theme[title]="#c5c9c5"
+
+# Highlight color for keyboard shortcuts (dragonBlue)
+theme[hi_fg]="#8ba4b0"
+
+# Background color of selected item (sumiInk3)
+theme[selected_bg]="#1f1f28"
+
+# Foreground color of selected item (dragonBlue)
+theme[selected_fg]="#8ba4b0"
+
+# Color of inactive/disabled text (sumiInk6/Gray)
+theme[inactive_fg]="#727169"
+
+# Color of text appearing on top of graphs (dragonYellow)
+theme[graph_text]="#c0a36e"
+
+# Background color of the percentage meters (sumiInk2)
+theme[meter_bg]="#1a1a22"
+
+# Misc colors for processes box (dragonYellow)
+theme[proc_misc]="#c0a36e"
+
+# CPU, Memory, Network, Proc box outline colors
+theme[cpu_box]="#8992a7" # DragonViolet
+theme[mem_box]="#87a987" # DragonGreen
+theme[net_box]="#c4746e" # DragonRed
+theme[proc_box]="#8ba4b0" # DragonBlue
+
+# Box divider line color
+theme[div_line]="#54546d"
+
+# Temperature graph color (Green -> Yellow -> Red)
+theme[temp_start]="#87a987"
+theme[temp_mid]="#c0a36e"
+theme[temp_end]="#c4746e"
+
+# CPU graph colors (Aqua -> Blue -> Violet)
+theme[cpu_start]="#8ea4a2"
+theme[cpu_mid]="#8ba4b0"
+theme[cpu_end]="#8992a7"
+
+# Mem/Disk free meter (Violet -> Blue)
+theme[free_start]="#8992a7"
+theme[free_mid]="#7e9cd8"
+theme[free_end]="#8ba4b0"
+
+# Mem/Disk cached meter (Aqua -> Blue)
+theme[cached_start]="#8ea4a2"
+theme[cached_mid]="#8ba4b0"
+theme[cached_end]="#7e9cd8"
+
+# Mem/Disk available meter (Orange -> Red)
+theme[available_start]="#b6927b"
+theme[available_mid]="#c4746e"
+theme[available_end]="#e46876"
+
+# Mem/Disk used meter (Green -> Aqua)
+theme[used_start]="#87a987"
+theme[used_mid]="#8ea4a2"
+theme[used_end]="#8ba4b0"
+
+# Download graph colors (Yellow -> Red)
+theme[download_start]="#c0a36e"
+theme[download_mid]="#b6927b"
+theme[download_end]="#c4746e"
+
+# Upload graph colors (Green -> Aqua)
+theme[upload_start]="#87a987"
+theme[upload_mid]="#8ea4a2"
+theme[upload_end]="#8ba4b0"
+
+# Process box color gradient (Aqua -> Blue -> Violet)
+theme[process_start]="#8ea4a2"
+theme[process_mid]="#8ba4b0"
+theme[process_end]="#8992a7"
