@@ -1,6 +1,5 @@
 starship init fish | source
 zoxide init --cmd cd fish | source
-eval "$(/opt/homebrew/bin/brew shellenv)"
 
 atuin init fish | source
 
@@ -40,6 +39,6 @@ function y
 	rm -f -- "$tmp"
 end
 
-function fish_user_key_bindings
-    bind \cf 'sh /Users/milan/scripts/tmux-sessionize; commandline -f repaint'
-end
+# function fish_user_key_bindings
+#     bind \cf 'sh /Users/milan/scripts/tmux-sessionize; commandline -f repaint'
+# end
