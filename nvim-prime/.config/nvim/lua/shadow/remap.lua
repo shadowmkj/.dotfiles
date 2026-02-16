@@ -9,6 +9,7 @@ vim.keymap.set("n", "<C-d>", "<C-d>zz")
 vim.keymap.set("n", "<C-u>", "<C-u>zz")
 vim.keymap.set("n", "n", "nzzzv")
 vim.keymap.set("n", "N", "Nzzzv")
+vim.keymap.set("n", "<leader>q", "<cmd>:q<CR>")
 
 vim.keymap.set("n", "<leader>vwm", function()
 	require("vim-with-me").StartVimWithMe()
@@ -45,8 +46,15 @@ vim.keymap.set("n", "<leader>ee", "oif err != nil {<CR>}<Esc>Oreturn err<Esc>")
 vim.keymap.set("n", "<leader>mr", "<cmd>CellularAutomaton make_it_rain<CR>")
 vim.keymap.set("n", "<leader>bd", "<cmd>bd<CR>")
 vim.keymap.set("n", "<leader>ls", "<cmd>!lcode submit %<CR>") -- submit to leetcode
-vim.keymap.set("n", "<leader>tt", "<cmd>:Themery<CR>") -- submit to leetcode
--- vim.keymap.set({ "n", "i" }, "<C-s>", "<cmd>w<CR><Esc>")
+vim.keymap.set("n", "<leader>tt", "<cmd>:Themery<CR>")
+vim.keymap.set("n", "<leader>lr", "<cmd>:LiveRun<CR>")
+
+-- Toggle Github Copilot
+vim.keymap.set("n", "<leader>cc", function()
+    local status = vim.g.copilot_enabled
+    vim.g.copilot_enabled = not status
+    print("Github Copilot: " .. (vim.g.copilot_enabled and "Enabled" or "Disabled"))
+end)
 
 -- wrap
 vim.keymap.set("n", "<leader>uw", function()
