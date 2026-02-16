@@ -36,6 +36,7 @@ autocmd({ "BufWritePre" }, {
 	command = [[%s/\s\+$//e]],
 })
 
+
 autocmd("LspAttach", {
 	group = ShadowGroup,
 	callback = function(e)
@@ -74,6 +75,7 @@ autocmd("LspAttach", {
 })
 
 vim.env.FZF_DEFAULT_COMMAND = 'rg --hidden --glob "! .git/*"'
+vim.cmd([[:Copilot disable]])
 
 vim.g.netrw_browse_split = 0
 vim.g.netrw_banner = 0

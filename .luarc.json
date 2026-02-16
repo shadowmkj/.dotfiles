@@ -1,6 +1,8 @@
 {
     "diagnostics.globals": [
         "transparent_bg",
-        "toggleTransparent"
+        "toggleTransparent",
+        "command",
+        "vim"
     ]
 }

@@ -27,7 +27,7 @@ alias tf="terraform"
 alias ff="fastfetch"
 alias tns="tmux new-session -s (pwd | path basename)"
 alias tks="tmux kill-server"
-
+alias tls="tmux list-sessions"
 
 
 # Yazi cd integration
