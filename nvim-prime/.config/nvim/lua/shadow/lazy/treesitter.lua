@@ -5,7 +5,7 @@ return {
 		"nvim-treesitter/nvim-treesitter-textobjects",
 	},
 	config = function()
-		require("nvim-treesitter.configs").setup({
+		require("nvim-treesitter.config").setup({
             modules = {},
             ignore_install = { "haskell" },
 			ensure_installed = {
