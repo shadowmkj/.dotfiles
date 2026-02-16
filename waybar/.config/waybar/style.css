@@ -15,15 +15,6 @@ window#waybar {
     background: transparent;
 }
 
-.modules-right {
-    padding-left: 8px;
-    padding-right: 8px;
-    border-radius: 15px 15px 15px 15px;
-    margin-right: 8px;
-    margin-top: 8px;
-    background: @bgcolor;
-}
-
 .modules-center {
     border-radius: 15px 15px 15px 15px;
     margin-top: 8px;
@@ -32,10 +23,15 @@ window#waybar {
 }
 
 .modules-left {
-    padding-left: 8px;
-    padding-right: 8px;
     border-radius: 15px 15px 15px 15px;
-    margin-left: 8px;
+    margin-left: 18px;
+    margin-top: 8px;
+    background: @bgcolor;
+}
+
+.modules-right {
+    border-radius: 15px 15px 15px 15px;
+    margin-right: 18px;
     margin-top: 8px;
     background: @bgcolor;
 }
@@ -55,25 +51,21 @@ window#waybar {
 #window,
 #workspaces,
 #clock {
-    padding: 0 5px;
-}
-
-#pulseaudio {
-    padding-top: 3px;
+    padding-left: 10px;
+    padding-right: 10px;
 }
 
 #temperature.critical,
+
 #pulseaudio.muted {
     color: #FF0000;
     padding-top: 0;
 }
 
-
 #workspaces button {
     margin-top: 8px;
     margin-bottom: 8px;
 }
-
 
 
 

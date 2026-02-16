@@ -7,16 +7,16 @@
     "memory",
     "cpu",
     "temperature",
-    "hyprland/workspaces",
+    "hyprland/workspaces"
   ],
   "modules-center": [
-    "hyprland/window",
-    "mpd"
+    "hyprland/window"
+    // "mpd"
   ],
   "modules-right": [
-    "bluetooth",
     "group/audio",
-    "group/networking",
+    "bluetooth",
+    "network",
     "battery"
   ],
   "reload_style_on_change": true,
@@ -56,14 +56,14 @@
       "▆",
       "▇",
       "█"
-    ],
+    ]
   },
   "temperature": {
     "format": " {temperatureC}°C",
     "format-critical": " {temperatureC}°C",
     "interval": 1,
     "critical-threshold": 80,
-    "on-click": "foot btop",
+    "on-click": "foot btop"
   },
   "custom/powerDraw": {
     "format": "{}",
@@ -88,7 +88,7 @@
       "*": [
         1,
         2,
-        3,
+        3
       ]
     }
   },
@@ -106,24 +106,6 @@
     "icon-size": 14,
     "spacing": 10
   },
-  "custom/updates": {
-    "format": "{}",
-    "interval": 60,
-    "exec": "~/.config/waybar/scripts/checkupdate.sh",
-    "return-type": "json",
-    "exec-if": "exit 0",
-  },
-  "group/blight": {
-    "orientation": "horizontal",
-    "drawer": {
-      "transition-duration": 500,
-      "transition-left-to-right": false
-    },
-    "modules": [
-      "backlight",
-      "backlight/slider"
-    ]
-  },
   "backlight": {
     "device": "intel_backlight",
     "format": "<span font='12'>{icon}</span>",
@@ -137,31 +119,11 @@
       "",
       "",
       "",
-      "",
+      ""
     ],
     "on-scroll-down": "light -U 10",
     "on-scroll-up": "light -A 10",
     "smooth-scrolling-threshold": 1
-  },
-  "backlight/slider": {
-    "min": 0,
-    "max": 100,
-    "orientation": "horizontal",
-    "device": "intel_backlight"
-  },
-  "idle_inhibitor": {
-    "format": "<span font='12'>{icon}</span>",
-    "format-icons": {
-      "activated": "󰾪",
-      "deactivated": "󰅶"
-    }
-  },
-  "custom/colorpicker": {
-    "format": "{}",
-    "return-type": "json",
-    "interval": "once",
-    "exec": "~/.config/waybar/scripts/colorpicker.sh -j",
-    "on-click": "sleep 1 && ~/.config/waybar/scripts/colorpicker.sh",
   },
   "bluetooth": {
     "format-on": "󰂰",
@@ -173,7 +135,7 @@
     "tooltip-format-connected": "{controller_alias}\t{controller_address}\n\n{num_connections} connected\n\n{device_enumerate}",
     "tooltip-format-enumerate-connected": "{device_alias}\t{device_address}",
     "tooltip-format-enumerate-connected-battery": "{device_alias}\t{device_address}\t{device_battery_percentage}%",
-    "on-click": "rofi-bluetooth",
+    "on-click": "rofi-bluetooth"
   },
   "pulseaudio": {
     "format": "{icon}",
@@ -183,6 +145,14 @@
     "format-icons": {
       "headphones": "",
       "bluetooth": "󰥰",
+      "handsfree": "",
+      "headset": "󱡬",
+      "phone": "",
+      "portable": "",
+      "car": "",
+      "default": [
+        "",
+      ]
     },
     "scroll-step": 5,
     "justify": "center",
@@ -209,8 +179,8 @@
     },
     "modules": [
       "pulseaudio",
-      "pulseaudio#mic",
-      "pulseaudio/slider"
+      "pulseaudio#mic"
+      // "pulseaudio/slider"
     ]
   },
   "pulseaudio/slider": {
@@ -235,19 +205,8 @@
     "tooltip-format-wifi": "{essid} ({signalStrength}%)   \n{ipaddr} | {frequency} MHz{icon} ",
     "tooltip-format-ethernet": "{ifname} 󰈀 \n{ipaddr} | {frequency} MHz{icon} ",
     "tooltip-format-disconnected": "Not Connected to any type of Network",
-    "tooltip": true,
+    "tooltip": true
     // "on-click": "pgrep -x rofi &>/dev/null && notify-send rofi || networkmanager_dmenu"
-  },
-  "group/networking": {
-    "orientation": "horizontal",
-    "drawer": {
-      "transition-duration": 500,
-      "transition-left-to-right": false
-    },
-    "modules": [
-      "network",
-      "network#speed"
-    ]
   },
   "battery": {
     "interval": 1,
