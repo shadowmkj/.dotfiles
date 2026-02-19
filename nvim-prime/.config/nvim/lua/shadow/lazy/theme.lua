@@ -1,3 +1,6 @@
+if true then
+    return {}
+end
 return {
 	"zaldih/themery.nvim",
 	lazy = false,
@@ -12,8 +15,9 @@ return {
 				"kanagawa",
 				"kanagawa-dragon",
 				"kanagawa-lotus",
+				"base16-gruvbox-dark-hard",
 			},
-			default_theme = "catppuccin",
+			default_theme = "kanagawa-dragon",
 			live_preview = true,
 		})
 	end,

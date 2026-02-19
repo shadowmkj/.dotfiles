@@ -20,12 +20,14 @@ vim.opt.undofile = true
 vim.opt.hlsearch = false
 vim.opt.incsearch = true
 
-vim.opt.termguicolors = true
-
 vim.opt.scrolloff = 8
 vim.opt.signcolumn = "yes"
 vim.opt.isfname:append("@-@")
 
+vim.g.base16colorspace = 256
 vim.opt.updatetime = 50
--- vim.opt.colorcolumn = "80"
+vim.opt.colorcolumn = "80"
 
+-- For rust the columns must be at 100
+vim.api.nvim_create_autocmd('Filetype', { pattern = 'rust', command = 'set colorcolumn=100' })
+vim.api.nvim_set_hl(0, "@lsp.type.variable.rust", { link = "Normal" })

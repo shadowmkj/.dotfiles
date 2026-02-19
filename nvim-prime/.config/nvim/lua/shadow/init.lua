@@ -1,7 +1,7 @@
 require("shadow.set")
 require("shadow.remap")
-
 require("shadow.lazy_init")
+require("shadow.theme")
 
 local augroup = vim.api.nvim_create_augroup
 local ShadowGroup = augroup("ShadowGroup", {})
@@ -36,6 +36,18 @@ autocmd({ "BufWritePre" }, {
 	command = [[%s/\s\+$//e]],
 })
 
+autocmd("BufReadPost", {
+	pattern = "*",
+	callback = function(_)
+		if vim.fn.line("'\"") > 1 and vim.fn.line("'\"") <= vim.fn.line("$") then
+			-- except for in git commit messages
+			-- https://stackoverflow.com/questions/31449496/vim-ignore-specifc-file-in-autocommand
+			if not vim.fn.expand("%:p"):find(".git", 1, true) then
+				vim.cmd('exe "normal! g\'\\""')
+			end
+		end
+	end,
+})
 
 autocmd("LspAttach", {
 	group = ShadowGroup,
@@ -80,3 +92,6 @@ vim.cmd([[:Copilot disable]])
 vim.g.netrw_browse_split = 0
 vim.g.netrw_banner = 0
 vim.g.netrw_winsize = 25
+
+
+

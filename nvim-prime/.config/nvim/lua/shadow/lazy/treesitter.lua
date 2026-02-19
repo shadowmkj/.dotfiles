@@ -1,32 +1,34 @@
 return {
 	"nvim-treesitter/nvim-treesitter",
 	build = ":TSUpdate",
-	dependencies = {
-		"nvim-treesitter/nvim-treesitter-textobjects",
-	},
+	-- dependencies = {
+	-- 	"nvim-treesitter/nvim-treesitter-textobjects",
+	-- },
 	config = function()
 		require("nvim-treesitter.configs").setup({
-            modules = {},
-            ignore_install = { "haskell" },
+			modules = {},
+			ignore_install = { "haskell"  },
 			ensure_installed = {
 				"vimdoc",
 				"javascript",
+                "rust",
 				"typescript",
 				"c",
 				"lua",
-				"rust",
 				"jsdoc",
 				"bash",
 				"markdown",
 				"markdown_inline",
 			},
 			sync_install = false,
-			auto_install = true,
+            auto_install = false,
 			indent = {
 				enable = true,
+				disable = { "rust" },
 			},
 			highlight = {
 				enable = true,
+				disable = { "rust" },
 				additional_vim_regex_highlighting = { "markdown" },
 			},
 		})
