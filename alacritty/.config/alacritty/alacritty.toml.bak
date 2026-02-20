@@ -1,0 +1,27 @@
+[window]
+decorations = "None"
+opacity = 0.96
+blur = true
+option_as_alt = "Both"
+padding = { x = 8, y = 8 }
+
+# Font Settings
+[font]
+size = 20
+
+[font.normal]
+family = "JetBrainsMono Nerd Font"
+style = "Regular"
+
+[cursor]
+style = { shape = "Block" }
+
+[terminal.shell]
+program = "/opt/homebrew/bin/fish"
+args = ["--login"]
+
+[general]
+live_config_reload = true
+import = [
+    "~/.config/alacritty/themes/themes/kanagawa_dragon.toml"
+]
