@@ -192,3 +192,7 @@ run = 'move-node-to-workspace 2'
 if.app-id = 'com.kagi.kagimacOS'
 run = 'move-node-to-workspace 2'
 
+[[on-window-detected]]
+if.app-id = 'NULL-APP-BUNDLE-ID'
+run = 'layout floating'
+

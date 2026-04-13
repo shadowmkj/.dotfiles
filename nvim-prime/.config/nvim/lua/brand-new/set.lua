@@ -1,5 +1,3 @@
-vim.opt.guicursor = ""
-
 vim.opt.nu = true
 vim.opt.relativenumber = true
 
@@ -7,6 +5,7 @@ vim.opt.tabstop = 4
 vim.opt.softtabstop = 4
 vim.opt.shiftwidth = 4
 vim.opt.expandtab = true
+vim.opt.guifont = "Iosevka Nerd Font:h14"
 
 vim.opt.smartindent = true
 
@@ -28,5 +27,10 @@ vim.g.base16colorspace = 256
 vim.opt.updatetime = 50
 vim.opt.colorcolumn = "80"
 
--- For rust the columns must be at 100
-vim.api.nvim_create_autocmd('Filetype', { pattern = 'rust', command = 'set colorcolumn=100' })
+vim.diagnostic.config({
+    virtual_text = true,
+    virtual_lines = false,
+    float = { border = "rounded" }
+})
+
+vim.opt.hlsearch = true

@@ -9,36 +9,18 @@ function fish_greeting
 		cat ~/todo | sed 's/^/ /'
 		echo
 	end
-
 	set_color normal
 end
 
-function fish_mode_prompt
-end
-
-
-# function fish_prompt
-# 	set_color brblack
-# 	echo -n "["(date "+%H:%M")"] "
-# 	set_color blue
-# 	if [ $PWD != $HOME ]
-# 		set_color brblack
-# 		set_color yellow
-# 		echo -n (basename $PWD)
-# 	end
-# 	set_color green
-# 	printf '%s ' (__fish_git_prompt)
-# 	set_color red
-# 	echo -n '| '
-# 	set_color normal
-# end
 starship init fish | source
 zoxide init --cmd cd fish | source
 eval "$(/opt/homebrew/bin/brew shellenv)"
 
+fzf --fish | source
 atuin init fish | source
 
 set EDITOR nvim
+set -Ux MANPAGER "nvim +Man! -c 'set ft=man'"
 
 # Fish git prompt
 set __fish_git_prompt_showuntrackedfiles 'yes'
@@ -55,7 +37,6 @@ alias ll='eza --long --all --header --icons --git'
 
 alias y='yazi'
 
-alias vim='nvim'
 alias v='nvim'
 alias ta='tmux attach'
 alias lg='lazygit'
@@ -70,6 +51,8 @@ alias tns="tmux new-session -s (pwd | path basename)"
 alias tks="tmux kill-server"
 alias tls="tmux list-sessions"
 alias bat="bat --theme='base16-256'"
+alias lc="leetrs"
+alias cg="cargo"
 
 
 # Yazi cd integration
@@ -87,13 +70,33 @@ function fish_user_key_bindings
 end
 
 
-# A function to list all tinty themes and select one
+# A function to list all tinty themes and select one (or cycle)
 function theme
-    set themes (tinty list)
-    set selected (printf '%s\n' $themes | fzf --prompt="Select a tinty theme: ")
-    if test -n "$selected"
-        tinty apply "$selected"
+    if test "$argv[1]" = "cycle"
+        tinty cycle
+    else
+        set themes (tinty list)
+        set selected (printf '%s\n' $themes | fzf --prompt="Select a tinty theme: ")
+        if test -n "$selected"
+            tinty apply "$selected"
+        end
     end
+
     # kitty @ set-colors --all /Users/milan/.local/share/tinted-theming/tinty/tinted-terminal-themes-kitty-file.conf
     tmux source-file ~/.tmux.conf 2>/dev/null
 end
+
+function apps
+    set dirs (fd -t d -d 1 . ~/Documents/Desk/Apps | awk -F/ '{print $7}' | fzf)
+    if test -n "$dirs"
+        cd ~/Documents/Desk/Apps/$dirs
+    end
+end
+
+function sudolast
+    sudo (history --max=1)
+end
+
+# Added by Antigravity
+fish_add_path /Users/milan/.antigravity/antigravity/bin
+
