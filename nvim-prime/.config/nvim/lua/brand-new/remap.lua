@@ -49,7 +49,7 @@ vim.keymap.set("n", "L", "$")
 vim.keymap.set("n", "<leader>ss", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
 
 -- Change till next _
-vim.keymap.set("n", "<leader>m", "ct_")
+-- vim.keymap.set("n", "<leader>m", "ct_")
 
 -- Misc
 vim.keymap.set("n", "<leader>bd", "<cmd>bd<CR>")

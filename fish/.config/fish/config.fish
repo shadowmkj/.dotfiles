@@ -100,3 +100,9 @@ end
 # Added by Antigravity
 fish_add_path /Users/milan/.antigravity/antigravity/bin
 
+# LuaRocks 5.1 / Neovim paths
+set -gx LUA_PATH "$HOME/.luarocks/share/lua/5.1/?.lua;$HOME/.luarocks/share/lua/5.1/?/init.lua;;"
+set -gx LUA_CPATH "$HOME/.luarocks/lib/lua/5.1/?.so;;"
+
+# Add LuaRocks binaries to your PATH
+fish_add_path $HOME/.luarocks/bin

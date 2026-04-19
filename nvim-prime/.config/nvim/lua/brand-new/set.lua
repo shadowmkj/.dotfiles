@@ -33,4 +33,4 @@ vim.diagnostic.config({
     float = { border = "rounded" }
 })
 
-vim.opt.hlsearch = true
+-- vim.opt.hlsearch = true

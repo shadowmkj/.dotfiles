@@ -165,7 +165,7 @@ autocmd("LspAttach", {
 })
 
 vim.env.FZF_DEFAULT_COMMAND = "rg --hidden"
-vim.cmd([[:Copilot disable]])
+-- vim.cmd([[:Copilot disable]])
 
 vim.g.netrw_browse_split = 0
 vim.g.netrw_banner = 0
@@ -173,3 +173,6 @@ vim.g.netrw_winsize = 25
 
 -- For rust the columns must be at 100
 autocmd('Filetype', { pattern = 'rust', command = 'set colorcolumn=100' })
+
+-- For transparent line number column
+vim.api.nvim_set_hl(0, 'LineNr', { bg = 'none' })

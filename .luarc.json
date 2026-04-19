@@ -4,5 +4,6 @@
         "toggleTransparent",
         "command",
         "vim"
-    ]
+    ],
+    "completion.autoRequire": false
 }
