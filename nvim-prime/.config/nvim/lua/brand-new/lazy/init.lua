@@ -5,5 +5,4 @@ return {
         name = "plenary"
     },
 
-    -- "github/copilot.vim",
 }

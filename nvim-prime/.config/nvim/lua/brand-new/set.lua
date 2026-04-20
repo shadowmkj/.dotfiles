@@ -5,7 +5,7 @@ vim.opt.tabstop = 4
 vim.opt.softtabstop = 4
 vim.opt.shiftwidth = 4
 vim.opt.expandtab = true
-vim.opt.guifont = "Iosevka Nerd Font:h14"
+-- vim.opt.guifont = "Iosevka Nerd Font:h14"
 
 vim.opt.smartindent = true
 
@@ -33,4 +33,4 @@ vim.diagnostic.config({
     float = { border = "rounded" }
 })
 
--- vim.opt.hlsearch = true
+require('vim._core.ui2').enable()

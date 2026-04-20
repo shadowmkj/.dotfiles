@@ -59,11 +59,11 @@ vim.keymap.set("n", "<leader>tt", "<cmd>:Themery<CR>")
 vim.keymap.set("n", "<leader>lr", "<cmd>:LiveRun<CR>")
 
 -- Toggle Github Copilot
-vim.keymap.set("n", "<leader>cc", function()
-    local status = vim.g.copilot_enabled
-    vim.g.copilot_enabled = not status
-    print("Github Copilot: " .. (vim.g.copilot_enabled and "Enabled" or "Disabled"))
-end)
+-- vim.keymap.set("n", "<leader>cc", function()
+--     local status = vim.g.copilot_enabled
+--     vim.g.copilot_enabled = not status
+--     print("Github Copilot: " .. (vim.g.copilot_enabled and "Enabled" or "Disabled"))
+-- end)
 
 -- wrap
 vim.keymap.set("n", "<leader>uw", function()
